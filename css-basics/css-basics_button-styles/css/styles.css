@@ -36,6 +36,8 @@ button {
   font-size: 16px;
   color: skyblue;
   background-color: lemonchiffon;
+  box-shadow: 2px 2px 2px 1px rgb(214, 210, 175);
+
   /*Style me! Change my border, set a border radius or what you want to try out. :) */
 }
 
@@ -46,6 +48,7 @@ button {
   background-color: skyblue;
   border: 3px solid lemonchiffon;
   border-radius: 25px;
+  box-shadow: 2px 2px 2px 1px rgb(114, 158, 175);
 
   /*Style me! Change my color, or my background-color. Or both! You can test out different color modes here - like HEX, RGB, ... */
 }
@@ -57,6 +60,8 @@ button {
   background-color: skyblue;
   border: 3px solid lemonchiffon;
   border-radius: 25px;
+  box-shadow: 2px 2px 2px 1px rgb(114, 158, 175);
+
   /*Style me! You can test out changing the font, or font size, ...*/
 }
 
@@ -67,6 +72,7 @@ button {
   font-size: 16px;
   color: skyblue;
   background-color: lemonchiffon;
+  box-shadow: 2px 2px 2px 1px rgb(214, 210, 175);
   /*Style me! Can you add a shadow to this button? Maybe play around with the shadow properties, as well? You can even color the shadow, make it bigger or smaller, ... */
 }
 
