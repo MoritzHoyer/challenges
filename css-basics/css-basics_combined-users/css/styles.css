@@ -57,13 +57,13 @@ aside .user {
   background-color: white;
 }
 
-.name {
+aside .name {
   font-size: 16px;
   text-transform: uppercase;
   margin: 0;
 }
 
-.bio {
+aside .bio {
   font-size: 12px;
   color: darkslategray;
   margin: 6px 0;
