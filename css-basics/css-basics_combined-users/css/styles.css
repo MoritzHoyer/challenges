@@ -46,22 +46,49 @@ li {
   background-color: white;
 }
 
-.name {
-  font-size: 18px;
+aside .user {
+  position: relative;
+  border: 2px solid lightslategray;
+  border-radius: 4px;
+  box-shadow: 4px 4px 0 lightslategray;
+  padding: 12px;
+  max-width: 250px;
+  margin: 0;
+  background-color: white;
+}
+
+aside .name {
+  font-size: 16px;
   text-transform: uppercase;
   margin: 0;
 }
 
-.bio {
-  font-size: 14px;
+aside .bio {
+  font-size: 12px;
   color: darkslategray;
+  margin: 6px 0;
+}
+
+ul .bio {
+  font-size: 12px;
+  color: darkslategray;
+  margin: 6px 0;
+  display: none;
 }
 
 .location {
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 600;
   text-align: end;
   margin: 0;
+}
+
+ul .location {
+  font-size: 10px;
+  font-weight: 600;
+  text-align: left;
+  margin: 0;
+  color: darkslategrey;
 }
 
 /*
