@@ -62,7 +62,7 @@ h1 {
 .box--one {
   background-color: lightblue;
 
-  width: 20vw;
+  width: 100px;
   height: 100px;
 }
 
@@ -71,6 +71,32 @@ h1 {
 
   width: 100px;
   height: 100px;
+}
+
+.box--three {
+  background-color: lightpink;
+
+  width: 50px;
+  height: 250px;
+}
+
+.box--four {
+  background-color: lightgray;
+
+  width: 100px;
+  height: 100px;
+}
+
+.box--five {
+  width: 100%;
+}
+
+.box--five img {
+  width: 100%;
+}
+
+.box--one {
+  width: 50%;
 }
 
 @media (min-width: 600px) {
@@ -85,36 +111,16 @@ h1 {
   }
 }
 
-.box--three {
-  background-color: lightpink;
-
-  width: 50px;
-  height: 250px;
-}
-
 @media (orientation: landscape) {
   .box--three {
     height: 50px;
+    width: 250px;
   }
-}
-
-.box--four {
-  background-color: lightgray;
-
-  width: 100px;
-  height: 100px;
 }
 
 @media (prefers-color-scheme: dark) {
   .box--four {
-    background-color: var(--color-foam);
+    background-color: hotpink;
+    color: #fff;
   }
-}
-
-.box--five {
-  width: 100%;
-}
-
-.box--five img {
-  width: 100%;
 }
