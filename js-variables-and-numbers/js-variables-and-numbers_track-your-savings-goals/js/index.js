@@ -12,4 +12,3 @@ console.log(
     totalSavings +
     " in your account."
 );
-...
