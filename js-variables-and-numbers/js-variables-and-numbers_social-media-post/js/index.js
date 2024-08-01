@@ -9,7 +9,7 @@ console.clear();
 	- a boolean called isReported
 */
 
-// --v-- write your code here --v--
+// // --v-- write your code here --v--
 
 const title = "First Post";
 const text = "Playing around with Javascript";
@@ -17,13 +17,13 @@ const likes = 59;
 const user = "Jens Fischer";
 const isReported = false;
 
-// --^-- write your code here --^--
+// // --^-- write your code here --^--
 
-/*
-2. Log all variables to the console. Increase the likes by one and log the amount of likes again. Adapt your code from 1.1 if necessary.
-*/
+// /*
+// 2. Log all variables to the console. Increase the likes by one and log the amount of likes again. Adapt your code from 1.1 if necessary.
+// */
 
-// --v-- write your code here --v--
+// // --v-- write your code here --v--
 
 console.log("Title:", title);
 console.log("Text:", text);
@@ -34,4 +34,4 @@ console.log("Is Reported:", isReported);
 const newLike = likes + 1;
 console.log("Updated Likes:", newLike);
 
-// --^-- write your code here --^--
+// // --^-- write your code here --^--
