@@ -13,7 +13,7 @@ console.clear();
 
 const title = "First Post";
 const text = "Playing around with Javascript";
-const likes = 59;
+let likes = 56;
 const user = "Jens Fischer";
 const isReported = false;
 
