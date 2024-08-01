@@ -11,6 +11,12 @@ console.clear();
 
 // --v-- write your code here --v--
 
+const title = "First Post";
+const text = "Playing around with Javascript";
+const likes = 59;
+const user = "Jens Fischer";
+const isReported = false;
+
 // --^-- write your code here --^--
 
 /*
@@ -18,5 +24,14 @@ console.clear();
 */
 
 // --v-- write your code here --v--
+
+console.log("Title:", title);
+console.log("Text:", text);
+console.log("Likes:", likes);
+console.log("User:", user);
+console.log("Is Reported:", isReported);
+
+const newLike = likes + 1;
+console.log("Updated Likes:", newLike);
 
 // --^-- write your code here --^--
