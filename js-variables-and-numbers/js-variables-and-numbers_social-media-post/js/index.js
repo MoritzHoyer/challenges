@@ -9,14 +9,29 @@ console.clear();
 	- a boolean called isReported
 */
 
-// --v-- write your code here --v--
+// // --v-- write your code here --v--
 
-// --^-- write your code here --^--
+const title = "First Post";
+const text = "Playing around with Javascript";
+let likes = 56;
+const user = "Jens Fischer";
+const isReported = false;
 
-/*
-2. Log all variables to the console. Increase the likes by one and log the amount of likes again. Adapt your code from 1.1 if necessary.
-*/
+// // --^-- write your code here --^--
 
-// --v-- write your code here --v--
+// /*
+// 2. Log all variables to the console. Increase the likes by one and log the amount of likes again. Adapt your code from 1.1 if necessary.
+// */
 
-// --^-- write your code here --^--
+// // --v-- write your code here --v--
+
+console.log("Title:", title);
+console.log("Text:", text);
+console.log("Likes:", likes);
+console.log("User:", user);
+console.log("Is Reported:", isReported);
+
+const newLike = likes + 1;
+console.log("Updated Likes:", newLike);
+
+// // --^-- write your code here --^--
