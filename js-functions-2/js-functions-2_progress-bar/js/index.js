@@ -26,17 +26,17 @@ progressBar.style.width = `0%`;
 function calculateScrollPercentage() {
   const scrollPosition = window.scrollY;
   const viewPortHeight = window.innerHeight;
-  const documentHeight = document.body.clientHeight;
+  const websiteHeight = document.body.clientHeight;
 
-  const scrollPercentage =
-    (scrollPosition / (documentHeight - viewPortHeight)) * 100;
-  return scrollPercentage;
+  // Calculate total scrollable area
+  const totalScrollHeight = websiteHeight - viewPortHeight;
+
+  // calculate how much percent of available space the user has scrolled
+  const scrollPercentage = (scrollPosition * 100) / totalScrollHeight;
+  // The function returns the scroll percentage as a string with a '%' sign appended, which is necessary for setting the CSS width property
+  return scrollPercentage + `%`;
 }
 
-function changeProgressBar() {
-  const scrollPercentage = calculateScrollPercentage;
-  progressBar.style.width = scrollPercentage + "%";
-  console.log(`scroll Percentage: ${scrollPercentage}%`);
-}
-
-document.addEventListener(`scroll`, changeProgressBar);
+document.addEventListener(`scroll`, () => {
+  progressBar.style.width = calculateScrollPercentage();
+});
