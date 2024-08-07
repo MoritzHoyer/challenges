@@ -19,8 +19,29 @@ const lowercaseButton = document.querySelector('[data-js="button-lowercase"]');
 
 uppercaseButton.addEventListener("click", () => {
   firstInput.value = firstInput.value.toUpperCase();
+  secondInput.value = secondInput.value.toUpperCase();
 });
 
 lowercaseButton.addEventListener("click", () => {
   firstInput.value = firstInput.value.toLowerCase();
+  secondInput.value = secondInput.value.toLowerCase();
+});
+
+const secondInput = document.createElement("input");
+secondInput.type = "text";
+secondInput.setAttribute("data-js", "second-input");
+document.querySelector("form").appendChild(secondInput);
+
+const switchButton = document.createElement("button");
+switchButton.type = "button";
+switchButton.innerHTML = "&updownarrow;";
+switchButton.setAttribute("data-js", "button-switch");
+document.querySelector("form").appendChild(switchButton);
+
+switchButton.addEventListener("click", () => {
+  const firstInputValue = firstInput.value;
+  const secondInputValue = secondInput.value;
+
+  firstInput.value = secondInputValue;
+  secondInput.value = firstInputValue;
 });
