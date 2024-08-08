@@ -14,6 +14,8 @@ likeButton.addEventListener("click", handleLikeButtonClick);
 const newPostSection = document.createElement("section");
 newPostSection.classList.add("post");
 
+// generate new HTML elements
+
 const newPostContent = document.createElement("p");
 newPostSection.classList.add("post__content");
 newPostContent.textContent = "Here is a new post for social media.";
@@ -30,12 +32,14 @@ newLikeButton.classList.add("post__button");
 newLikeButton.type = "button";
 newLikeButton.setAttribute("data-js", "like-button");
 newLikeButton.textContent = "♥ Like";
+// add eventListener for newLikeButton
+newLikeButton.addEventListener("click", handleLikeButtonClick);
 
+// put together social media post
 newPostSection.append(newPostContent);
 newPostSection.append(newPostFooter);
 newPostFooter.append(newPostUsername);
 newPostFooter.append(newLikeButton);
 
-newLikeButton.addEventListener("click", handleLikeButtonClick);
-
+// Append the second social media post to the body
 document.body.append(newPostSection);
