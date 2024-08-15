@@ -12,7 +12,19 @@ const filteredNews = news.filter((card) =>
 console.log(filteredNews);
 
 // Part 2 - start here
-const sortedNews = filteredNews.sort((a, b) => a.body.length - b.body.length);
+// const sortedNews = filteredNews.sort((a, b) => {
+//   if (a.body.length < b.body.length) {
+//     return -1;
+//   }
+//   if (a.body.length > b.body.length) {
+//     return 1;
+//   }
+//   return 0;
+// });
+
+const sortedNews = filteredNews
+  // .slice()
+  .sort((a, b) => a.body.length - b.body.length);
 
 console.log(sortedNews);
 
