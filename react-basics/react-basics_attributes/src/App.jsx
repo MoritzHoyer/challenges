@@ -9,7 +9,9 @@ export default function App() {
       <a
         className="article__link"
         href="https://de.wikipedia.org/wiki/Bootcamp"
-      ></a>
+      >
+        Ab ins Bootcamp, Kristoffer &hearts;
+      </a>
     </article>
   );
 }
