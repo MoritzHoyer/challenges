@@ -5,5 +5,5 @@ export default function App() {
 }
 
 function HelloWorld() {
-  return <h1>Say hello...</h1>;
+  return <h1>Hello World, Kristoffer &hearts;</h1>;
 }
