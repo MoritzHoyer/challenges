@@ -16,13 +16,12 @@ export default function App() {
   );
 }
 
-function Button({ color, backgroundColor, height, disabled, text, onClick }) {
+function Button({ color, backgroundColor, disabled, text, onClick }) {
   return (
     <button
       style={{
         color: color,
         backgroundColor: backgroundColor,
-        height: "100px",
       }}
       disabled={disabled}
       onClick={onClick}
