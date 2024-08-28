@@ -1,20 +1,19 @@
+import FavoriteButton from "../FavoriteButton";
 import "./Entry.css";
-import star from "../../assets/star.svg";
-import starFilled from "../../assets/star-filled.svg";
 
-export default function Entry({ date, title, text, favorite }) {
+export default function Entry({ motto, notes, date }) {
   return (
-    <div className="entry">
-      <div className="entry__header">
-        <h2 className="entry__title">{title}</h2>
-        <img
-          className="entry__favorite"
-          src={favorite ? starFilled : star}
-          alt="Favorite"
-        />
+    <article className="entry">
+      <time className="entry__date">{date}</time>
+      <div className="entry__content">
+        <div className="entry__motto-container">
+          <h2 className="entry__motto">
+            <q>{motto}</q>
+          </h2>
+          <FavoriteButton />
+        </div>
+        <p className="entry__notes">{notes}</p>
       </div>
-      <div className="entry__date">{date}</div>
-      <p className="entry__text">{text}</p>
-    </div>
+    </article>
   );
 }
