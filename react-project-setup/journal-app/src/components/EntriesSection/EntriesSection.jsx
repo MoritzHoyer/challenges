@@ -1,9 +1,9 @@
 import "./EntriesSection.css";
-import Divider from "../Divider";
-import Entry from "../Entry";
-import Tabs from "../Tabs";
-import Tab from "../Tab";
-import Badge from "../Badge";
+import Divider from "../Divider/Divider.jsx";
+import Entry from "../Entry/Entry.jsx";
+import Tabs from "../Tabs/Tabs.jsx";
+import Tab from "../Tab/Tab.jsx";
+import Badge from "../Badge/Badge.jsx";
 
 export default function EntriesSection() {
   return (
