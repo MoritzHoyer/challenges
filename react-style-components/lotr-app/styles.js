@@ -1,5 +1,13 @@
 import { createGlobalStyle } from "styled-components";
+import { Lora } from "@next/font/google";
 
+// Definiere die Lora Schriftart
+const lora = Lora({
+  subsets: ["latin"],
+  style: ["normal", "italic"],
+});
+
+// Globale Stile anwenden
 export default createGlobalStyle`
   *,
   *::before,
@@ -9,6 +17,6 @@ export default createGlobalStyle`
 
   body {
     margin: 0;
-    font-family: system-ui;
+    font-family: ${lora.style.fontFamily}, serif;
   }
 `;
