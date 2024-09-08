@@ -1,56 +1,42 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import HistoryEntry from ".";
+import HistoryEntry from "./index";
 
-test.skip("renders name of game and 'show score' button only", () => {
-  render(
-    <HistoryEntry
-      nameOfGame="Dodelido"
-      players={[
-        { name: "John", score: 2, id: "xyz" },
-        { name: "Jane", score: 1, id: "abc" },
-      ]}
-    />
-  );
+test("renders name of game and 'show score' button only", () => {
+  const gameData = { name: "Pokemon", players: [] };
 
-  const nameOfGame = screen.getByText(/dodelido/i);
-  const button = screen.getByRole("button", { name: /show score/i });
+  render(<HistoryEntry game={gameData} />);
 
-  expect(nameOfGame).toBeInTheDocument();
-  expect(button).toBeInTheDocument();
+  // Überprüfen, ob der Spielname gerendert wird
+  expect(screen.getByText("Pokemon")).toBeInTheDocument();
+
+  // Überprüfen, ob der Button gerendert wird
+  expect(
+    screen.getByRole("button", { name: /show scores/i })
+  ).toBeInTheDocument();
+
+  // Überprüfen, dass die Punktestände noch nicht sichtbar sind
+  const scores = screen.queryByRole("list");
+  expect(scores).not.toBeInTheDocument();
 });
 
-test.skip("renders player names and scores after button click", async () => {
-  render(
-    <HistoryEntry
-      nameOfGame="Dodelido"
-      players={[
-        { name: "John", score: 2, id: "xyz" },
-        { name: "Jane", score: 1, id: "abc" },
-      ]}
-    />
-  );
+test("renders player names and scores after button click", async () => {
+  const gameData = {
+    name: "Pokemon",
+    players: [
+      { name: "Pikachu", score: 5 },
+      { name: "Bisasam", score: 7 },
+    ],
+  };
 
-  const noPlayer1 = screen.queryByText(/john/i);
-  const noPlayer2 = screen.queryByText(/jane/i);
-  const noPlayerScore1 = screen.queryByText(/2/i);
-  const noPlayerScore2 = screen.queryByText(/1/i);
+  render(<HistoryEntry game={gameData} />);
 
-  expect(noPlayer1).not.toBeInTheDocument();
-  expect(noPlayer2).not.toBeInTheDocument();
-  expect(noPlayerScore1).not.toBeInTheDocument();
-  expect(noPlayerScore2).not.toBeInTheDocument();
+  const button = screen.getByRole("button", { name: /show scores/i });
 
-  const button = screen.getByRole("button", { name: /show score/i });
+  // Button klicken
   await userEvent.click(button);
 
-  const player1 = screen.getByText(/john/i);
-  const player2 = screen.getByText(/jane/i);
-  const playerScore1 = screen.getByText(/2/i);
-  const playerScore2 = screen.getByText(/1/i);
-
-  expect(player1).toBeInTheDocument();
-  expect(player2).toBeInTheDocument();
-  expect(playerScore1).toBeInTheDocument();
-  expect(playerScore2).toBeInTheDocument();
+  // Überprüfen, dass die Spielernamen und Punktestände nach dem Klick sichtbar sind
+  expect(screen.getByText("Pikachu: 5")).toBeInTheDocument();
+  expect(screen.getByText("Bisasam: 7")).toBeInTheDocument();
 });
