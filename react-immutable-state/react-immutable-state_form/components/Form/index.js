@@ -1,8 +1,9 @@
 import { useState } from "react";
+import { useImmer } from "use-immer";
 import { StyledForm, StyledInputContainer } from "./Form.styled";
 
 export default function Form() {
-  const [mountain, setMountain] = useState({
+  const [mountain, updateMountain] = useImmer({
     name: "Mount Everest",
     values: {
       altitude: 8848,
@@ -10,11 +11,58 @@ export default function Form() {
     },
   });
 
-  function handleNameChange(event) {}
+  function handleNameChange(event) {
+    updateMountain((draft) => {
+      draft.name = event.target.value;
+    });
+  }
 
-  function handleAltitudeChange(event) {}
+  function handleAltitudeChange(event) {
+    updateMountain((draft) => {
+      draft.values.altitude = event.target.value;
+    });
+  }
 
-  function handleMountainRangeChange(event) {}
+  function handleMountainRangeChange(event) {
+    updateMountain((draft) => {
+      draft.values.mountainRange = event.target.value;
+    });
+  }
+
+  // export default function Form() {
+  //   const [mountain, setMountain] = useState({
+  //     name: "Mount Everest",
+  //     values: {
+  //       altitude: 8848,
+  //       mountainRange: "Himalayas",
+  //     },
+  //   });
+
+  //     function handleNameChange(event) {
+  //       setMountain({
+  //         ...mountain, // Kopiere das gesamte mountain-Objekt
+  //         name: event.target.value, // Aktualisiere den Namen mit dem neuen Wert aus dem Input
+  //       });
+  //     }
+
+  //   }
+
+  //     function handleNameChange(event) {
+  //       setMountain({
+  //         ...mountain, // Kopiere das gesamte mountain-Objekt
+  //         name: event.target.value, // Aktualisiere den Namen mit dem neuen Wert aus dem Input
+  //       });
+  //     }
+
+  //     function handleAltitudeChange(event) {
+  //       setMountain({
+  //         ...mountain, // Kopiere das gesamte mountain-Objekt
+  //         values: {
+  //           ...mountain.values, // Kopiere das values-Objekt
+  //           altitude: event.target.value, // Aktualisiere den Altitude-Wert
+  //         },
+  //       });
+  //     }
 
   return (
     <StyledForm>
