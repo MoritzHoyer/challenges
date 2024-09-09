@@ -47,13 +47,6 @@ export default function Form() {
 
   //   }
 
-  //     function handleNameChange(event) {
-  //       setMountain({
-  //         ...mountain, // Kopiere das gesamte mountain-Objekt
-  //         name: event.target.value, // Aktualisiere den Namen mit dem neuen Wert aus dem Input
-  //       });
-  //     }
-
   //     function handleAltitudeChange(event) {
   //       setMountain({
   //         ...mountain, // Kopiere das gesamte mountain-Objekt
@@ -63,6 +56,16 @@ export default function Form() {
   //         },
   //       });
   //     }
+
+  // function handleMountainRangeChange(event) {
+  //   setMountain({
+  //     ...mountain,
+  //     values: {
+  //       ...mountain.values,
+  //       mountainRange: event.target.value,
+  //     },
+  //   });
+  // }
 
   return (
     <StyledForm>
