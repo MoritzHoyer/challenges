@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import Review from "./Review";
 
 // Destrukturiert das Schema-Objekt aus dem Mongoose-Modul, um es später für die Erstellung eines Schemas zu verwenden.
 const { Schema } = mongoose;
@@ -17,7 +16,7 @@ const productSchema = new Schema({
   price: { type: Number, required: true },
   currency: { type: String, required: true },
   // Füge eine Referenz zu den Reviews hinzu (Array von ObjectIds, die auf Reviews verweisen)
-  reviews: [{ type: Schema.Types.ObjectId, ref: "Review" }],
+  reviews: { type: [Schema.Types.ObjectId], ref: "Review" },
 });
 
 // Überprüft, ob bereits ein Modell mit dem Namen "Product" existiert.

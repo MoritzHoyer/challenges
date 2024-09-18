@@ -1,5 +1,5 @@
 // Importiert das 'Product'-Modell, um auf die 'products'-Collection in der MongoDB-Datenbank zuzugreifen.
-import Product from "@/db/models/Products";
+import Product from "@/db/models/Product";
 
 // Importiert die 'dbConnect'-Funktion, um eine Verbindung zur MongoDB-Datenbank herzustellen.
 import dbConnect from "@/db/connect";

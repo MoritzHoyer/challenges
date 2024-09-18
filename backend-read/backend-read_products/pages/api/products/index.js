@@ -2,7 +2,7 @@
 import dbConnect from "@/db/connect";
 
 // Importiert das 'Product'-Modell aus der Datei 'Products.js', um mit der 'products'-Collection in der MongoDB-Datenbank zu arbeiten.
-import Product from "@/db/models/Products";
+import Product from "@/db/models/Product";
 
 // Exportiert die Funktion 'handler', die eine asynchrone API-Routenfunktion ist.
 // Diese Funktion verarbeitet eingehende HTTP-Anfragen an die API.
