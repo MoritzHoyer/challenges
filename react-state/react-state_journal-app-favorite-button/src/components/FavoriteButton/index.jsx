@@ -1,19 +1,24 @@
+import { useState } from "react";
 import "./FavoriteButton.css";
 import StarFilled from "./star-filled.svg?react";
 import Star from "./star.svg?react";
 
 export default function FavoriteButton() {
-  // this should be a state variable
-  const isFavorite = false;
+  // Erstellen eines Zustands für isFavorite
+  const [isFavorite, setIsFavorite] = useState(false);
+
+  // Funktion zum Umschalten des Favoritenstatus
+  function handleToggleFavorite() {
+    setIsFavorite((prevIsFavorite) => !prevIsFavorite);
+  }
 
   return (
     <button
       className="favorite-button"
-      onClick={() => {
-        console.log("favorite button clicked");
-      }}
+      onClick={handleToggleFavorite} // Umschaltfunktion wird beim Klick aufgerufen
       aria-label="favorite"
     >
+      {/* Das Sternsymbol ändert sich je nach isFavorite-Status */}
       {isFavorite ? <StarFilled /> : <Star />}
     </button>
   );
