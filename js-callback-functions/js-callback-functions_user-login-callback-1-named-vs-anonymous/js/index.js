@@ -5,4 +5,14 @@ function handleUserLogin(onSuccess) {
   onSuccess();
 }
 
+function showWelcomeMessage() {
+  console.log("Welcome! You are logged in now");
+}
+
 // Call handleUserLogin below!
+handleUserLogin(showWelcomeMessage);
+
+// Call handleUserLogin with anonymous arrow function as callback
+handleUserLogin(function () {
+  console.log("Welcome! You are logged in now.");
+});
