@@ -1,12 +1,16 @@
-import { useState } from "react";
+import useLocalStorageState from "use-local-storage-state";
 import FontSelector from "./components/FontSelector";
 import Note from "./components/Note";
 import "./App.css";
 
 export default function App() {
-  const [note, setNote] = useState("");
-  const [font, setFont] = useState("system-ui");
+  // Save note in localStorage with key "note"
+  const [note, setNote] = useLocalStorageState("note", { defaultValue: "" });
 
+  // Save font in localStorage with key "font"
+  const [font, setFont] = useLocalStorageState("font", {
+    defaultValue: "system-ui",
+  });
   function handleNoteChange(newNote) {
     setNote(newNote);
   }
