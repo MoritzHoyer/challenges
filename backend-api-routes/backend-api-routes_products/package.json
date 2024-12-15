@@ -11,9 +11,10 @@
   },
   "dependencies": {
     "@next/font": "^13.0.6",
-    "eslint": "8.43.0",
-    "eslint-config-next": "13.4.7",
-    "next": "13.4.7",
+    "chalk": "^5.3.0",
+    "eslint": "^9.10.0",
+    "eslint-config-next": "^14.2.11",
+    "next": "^14.2.11",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "styled-components": "^6.0.0-rc.6",
