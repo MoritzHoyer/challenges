@@ -18,3 +18,15 @@ const uppercaseButton = document.querySelector('[data-js="button-uppercase"]');
 uppercaseButton.addEventListener("click", () => {
   input.value = input.value.toUpperCase();
 });
+
+const lowercaseButton = document.createElement("button");
+lowercaseButton.type = "button";
+lowercaseButton.innerHTML = "&darr;";
+lowercaseButton.setAttribute("data-js", "button-lowercase");
+
+const form = document.querySelector("form");
+form.appendChild(lowercaseButton);
+
+lowercaseButton.addEventListener("click", () => {
+  input.value = input.value.toLowerCase();
+});
