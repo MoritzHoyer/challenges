@@ -1,14 +1,13 @@
 import { useState } from "react";
 import "./Counter.css";
 
-
 export default function Counter() {
   const [count, setCount] = useState(0);
 
   function handleIncrement() {
-    setCount(count + 1);
-    setCount(count + 1);
-    setCount(count + 1);
+    setCount((prevCount) => prevCount + 1); // Erhöht um 1 basierend auf dem vorherigen Zustand
+    setCount((prevCount) => prevCount + 1); // Erhöht um 1 basierend auf dem aktualisierten Zustand
+    setCount((prevCount) => prevCount + 1); // Erhöht um 1 basierend auf dem erneut aktualisierten Zustand
   }
 
   return (
